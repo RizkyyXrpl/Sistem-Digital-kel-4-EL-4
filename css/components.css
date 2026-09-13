@@ -1,0 +1,956 @@
+/* ==========================================================================
+   MK SISTEM DIGITAL - ITERA
+   Component Stylesheet: Central Hub, Bit Board, Grouping, Complement & Quiz
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CENTRAL BINARY HUB (CORE FEATURE)
+   ========================================================================== */
+.central-hub-container {
+  background: radial-gradient(ellipse at center, rgba(6, 182, 212, 0.08) 0%, rgba(13, 20, 36, 0.95) 75%);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  margin-bottom: 32px;
+}
+
+.central-hub-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.hub-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: var(--accent-cyan);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hub-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin: 10px 0 6px;
+  color: #ffffff;
+}
+
+.hub-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Central Bridge Visual Architecture */
+.hub-pipeline-visual {
+  display: grid;
+  grid-template-columns: 1fr auto 1.4fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0;
+  padding: 24px;
+  background: rgba(7, 11, 20, 0.8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.pipeline-node {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  text-align: center;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.pipeline-node.center-hub {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(59, 130, 246, 0.2));
+  border: 2px solid var(--accent-cyan);
+  box-shadow: 0 0 24px rgba(6, 182, 212, 0.35);
+  transform: scale(1.04);
+}
+
+.pipeline-node-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  color: var(--text-muted);
+}
+
+.center-hub .pipeline-node-badge {
+  color: var(--accent-cyan);
+}
+
+.pipeline-node-val {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.pipeline-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--accent-cyan);
+  font-size: 1.4rem;
+  animation: pulseArrow 2s infinite ease-in-out;
+}
+
+.pipeline-arrow-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+@keyframes pulseArrow {
+  0%, 100% { opacity: 0.6; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(3px); }
+}
+
+@media (max-width: 900px) {
+  .hub-pipeline-visual {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .pipeline-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* Hub Interactive Controls Form */
+.hub-input-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.input-controls-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .input-controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.select-custom, .input-custom {
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.select-custom:focus, .input-custom:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+.preset-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  align-items: center;
+}
+
+.preset-title {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.preset-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.preset-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+
+/* ==========================================================================
+   2. INTERACTIVE BIT SWITCH BOARD (8 & 16-BIT REGISTER)
+   ========================================================================== */
+.bit-board-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.board-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.board-title-wrap h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.board-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.board-action-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.board-action-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  border-color: var(--accent-cyan);
+}
+
+.bit-cells-scroll {
+  overflow-x: auto;
+  padding: 12px 4px 18px;
+}
+
+.bit-cells-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  min-width: max-content;
+}
+
+.nibble-divider {
+  width: 2px;
+  height: 90px;
+  background: rgba(6, 182, 212, 0.4);
+  border-radius: 1px;
+  margin: 0 4px;
+  position: relative;
+}
+
+.nibble-divider::after {
+  content: 'NIBBLE';
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: 0.5px;
+}
+
+.bit-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bit-weight-label {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.bit-switch-btn {
+  width: 52px;
+  height: 64px;
+  background: var(--bg-input);
+  border: 2px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  user-select: none;
+}
+
+.bit-switch-btn:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+}
+
+.bit-switch-btn.active {
+  background: linear-gradient(180deg, #0284c7, #0369a1);
+  border-color: var(--accent-cyan);
+  color: #ffffff;
+  box-shadow: 0 0 16px var(--accent-cyan-glow);
+  transform: translateY(-4px);
+}
+
+.bit-meta-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.bit-meta-badge.msb {
+  background: rgba(244, 63, 94, 0.2);
+  color: var(--accent-rose);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.bit-meta-badge.lsb {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* ==========================================================================
+   3. GROUPING INSPECTOR (4-BIT HEX & 3-BIT OCTAL)
+   ========================================================================== */
+.grouping-display-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.group-blocks-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.group-block {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 140px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.group-block.group-hex-0 { border: 1px solid rgba(6, 182, 212, 0.5); }
+.group-block.group-hex-1 { border: 1px solid rgba(139, 92, 246, 0.5); }
+.group-block.group-hex-2 { border: 1px solid rgba(245, 158, 11, 0.5); }
+.group-block.group-hex-3 { border: 1px solid rgba(16, 185, 129, 0.5); }
+
+.group-block.group-oct-0 { border: 1px solid rgba(59, 130, 246, 0.5); }
+.group-block.group-oct-1 { border: 1px solid rgba(236, 72, 153, 0.5); }
+.group-block.group-oct-2 { border: 1px solid rgba(16, 185, 129, 0.5); }
+.group-block.group-oct-3 { border: 1px solid rgba(245, 158, 11, 0.5); }
+
+.group-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.group-bits {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  gap: 4px;
+}
+
+.group-bit-padded {
+  color: var(--text-muted);
+  opacity: 0.6;
+  border-bottom: 2px dashed var(--accent-amber);
+}
+
+.group-arrow-down {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.group-target-val {
+  background: var(--bg-input);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  border: 1px solid var(--border-subtle);
+}
+
+.group-formula-text {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   4. STEP-BY-STEP CALCULATION BOX
+   ========================================================================== */
+.step-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.step-card {
+  background: var(--bg-elevated);
+  border-left: 4px solid var(--accent-cyan);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+
+.step-number {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.step-desc {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.step-math-box {
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: #38bdf8;
+  overflow-x: auto;
+}
+
+.division-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  margin-top: 10px;
+}
+
+.division-table th, .division-table td {
+  padding: 8px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.division-table th {
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.division-table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ==========================================================================
+   5. WEEK 2: SIGNED NUMBERS & 2'S COMPLEMENT ARITHMETIC
+   ========================================================================== */
+.scheme-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 992px) {
+  .scheme-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scheme-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.scheme-card.highlight {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+}
+
+.scheme-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.scheme-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--accent-cyan);
+}
+
+.scheme-formula-badge {
+  background: var(--bg-elevated);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 12px 0;
+  border-left: 3px solid var(--accent-purple);
+}
+
+/* 2's Complement 3-Step Interactive Pipeline */
+.c2-pipeline-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.pipeline-steps-3 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 860px) {
+  .pipeline-steps-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.c2-step-node {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+}
+
+.c2-step-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.c2-step-bits {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+/* Binary Arithmetic & Adder Simulator */
+.adder-sim-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.adder-calc-board {
+  max-width: 580px;
+  margin: 24px auto;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px 32px;
+  font-family: var(--font-mono);
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 1.25rem;
+}
+
+.calc-row.carry-row {
+  color: var(--accent-amber);
+  font-size: 0.95rem;
+  border-bottom: 1px dashed rgba(245, 158, 11, 0.4);
+}
+
+.calc-row.divider-row {
+  border-top: 2px solid var(--border-subtle);
+  margin-top: 8px;
+}
+
+.calc-row.result-row {
+  font-weight: 800;
+  color: var(--accent-emerald);
+  font-size: 1.45rem;
+}
+
+.status-flags-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.flag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.flag-badge.active-flag {
+  background: rgba(244, 63, 94, 0.2);
+  color: var(--accent-rose);
+  border-color: rgba(244, 63, 94, 0.4);
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.3);
+}
+
+/* ==========================================================================
+   6. INTERACTIVE QUIZ & PRACTICE CARDS
+   ========================================================================== */
+.quiz-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.quiz-card.solved-correct {
+  border-color: var(--accent-emerald);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+}
+
+.quiz-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.quiz-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+  text-transform: uppercase;
+}
+
+.quiz-question-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.quiz-input-group {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.quiz-input {
+  flex: 1;
+  min-width: 200px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.quiz-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.quiz-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-cyan);
+}
+
+.quiz-feedback-box {
+  display: none;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  margin-top: 14px;
+  font-size: 0.88rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.quiz-feedback-box.correct {
+  display: block;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+}
+
+.quiz-feedback-box.wrong {
+  display: block;
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: #fb7185;
+}
+
+.quiz-solution-toggle {
+  background: transparent;
+  border: none;
+  color: var(--accent-cyan);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.quiz-solution-content {
+  display: none;
+  background: var(--bg-input);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.quiz-solution-content.show {
+  display: block;
+}
+
+/* ==========================================================================
+   7. WEEKS 3 - 14 ROADMAP & PLACEHOLDER GRID
+   ========================================================================== */
+.roadmap-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 36px;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.roadmap-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(148, 163, 184, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+.roadmap-card.active-module {
+  border-color: rgba(6, 182, 212, 0.5);
+  background: linear-gradient(180deg, rgba(6, 182, 212, 0.05), rgba(18, 27, 47, 0.85));
+}
+
+.roadmap-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.roadmap-week-num {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.roadmap-cpmk-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+}
+
+.roadmap-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.roadmap-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.roadmap-topics-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.roadmap-topic-item {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roadmap-topic-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  opacity: 0.6;
+}
+
+.roadmap-action-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.roadmap-card.active-module .roadmap-action-btn {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: white;
+  border: none;
+}
+
+.roadmap-action-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.roadmap-card.active-module .roadmap-action-btn:hover {
+  box-shadow: var(--shadow-cyan);
+}

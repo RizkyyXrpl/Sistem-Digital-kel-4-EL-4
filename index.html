@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Ajar MK Sistem Digital - ITERA | Interaktif & Modular</title>
+  <meta name="description" content="Media ajar interaktif web mata kuliah Sistem Digital Institut Teknologi Sumatera (ITERA). Mempelajari konversi bilangan dengan Central Binary Hub, Representasi Two's Complement, dan Aritmatika Digital.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+  <!-- ======================================================================
+       SIDEBAR NAVIGATION (WEEKS 1 - 14)
+       ====================================================================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="itera-logo-badge">IT</div>
+      <div>
+        <div class="sidebar-brand-title">MK SISTEM DIGITAL</div>
+        <div class="sidebar-brand-sub">Institut Teknologi Sumatera</div>
+      </div>
+    </div>
+
+    <!-- Course Progress Bar -->
+    <div class="sidebar-progress">
+      <div class="progress-label-row">
+        <span>Kurikulum Perkuliahan</span>
+        <strong style="color:var(--accent-cyan);">2 / 14 Minggu</strong>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Week Navigation List -->
+    <div class="sidebar-nav-container">
+      <div class="sidebar-section-title">Modul Perkuliahan</div>
+      <ul class="week-nav-list">
+        <li class="week-nav-item">
+          <button class="week-nav-btn active" data-week="1">
+            <div class="week-btn-left">
+              <span class="week-number-badge">01</span>
+              <span class="week-btn-title">Sistem Bilangan & Konversi</span>
+            </div>
+            <span class="status-pill active-pill">Aktif</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="2">
+            <div class="week-btn-left">
+              <span class="week-number-badge">02</span>
+              <span class="week-btn-title">Bilangan Bertanda & Aritmatika</span>
+            </div>
+            <span class="status-pill active-pill">Aktif</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="3">
+            <div class="week-btn-left">
+              <span class="week-number-badge">03</span>
+              <span class="week-btn-title">Aljabar Boolean & Gerbang</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="4">
+            <div class="week-btn-left">
+              <span class="week-number-badge">04</span>
+              <span class="week-btn-title">Peta Karnaugh (K-Map)</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="5">
+            <div class="week-btn-left">
+              <span class="week-number-badge">05</span>
+              <span class="week-btn-title">Rangkaian Kombinasional</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="6">
+            <div class="week-btn-left">
+              <span class="week-number-badge">06</span>
+              <span class="week-btn-title">MUX, DEMUX & Decoder</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="7">
+            <div class="week-btn-left">
+              <span class="week-number-badge">07</span>
+              <span class="week-btn-title">Review & Studi Kasus</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="8">
+            <div class="week-btn-left">
+              <span class="week-number-badge">08</span>
+              <span class="week-btn-title">Evaluasi Tengah Semester</span>
+            </div>
+            <span class="status-pill locked-pill">UTS</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="9">
+            <div class="week-btn-left">
+              <span class="week-number-badge">09</span>
+              <span class="week-btn-title">Sekuensial: Flip-Flop</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="10">
+            <div class="week-btn-left">
+              <span class="week-number-badge">10</span>
+              <span class="week-btn-title">Register & Shift Register</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="11">
+            <div class="week-btn-left">
+              <span class="week-number-badge">11</span>
+              <span class="week-btn-title">Pencacah (Counter)</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="12">
+            <div class="week-btn-left">
+              <span class="week-number-badge">12</span>
+              <span class="week-btn-title">Finite State Machine (FSM)</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="13">
+            <div class="week-btn-left">
+              <span class="week-number-badge">13</span>
+              <span class="week-btn-title">Memori Digital & PLD</span>
+            </div>
+            <span class="status-pill locked-pill">Terjadwal</span>
+          </button>
+        </li>
+        <li class="week-nav-item">
+          <button class="week-nav-btn" data-week="14">
+            <div class="week-btn-left">
+              <span class="week-number-badge">14</span>
+              <span class="week-btn-title">Proyek & Ujian Akhir</span>
+            </div>
+            <span class="status-pill locked-pill">UAS</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sidebar Footer Lecturer Info -->
+    <div class="sidebar-footer">
+      <div class="lecturer-info-card">
+        <span style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.5px;">Dosen Pengampu:</span>
+        <span class="lecturer-name">Dr. Swadexi Istiqphara, S.T., M.T.</span>
+        <span class="lecturer-name">Efa Maydhona, S.T., M.T.</span>
+        <span class="lecturer-name">Nia Saputri Utami, S.T., M.T.</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       MAIN CONTENT WRAPPER
+       ====================================================================== -->
+  <div class="main-wrapper">
+
+    <!-- Top Sticky Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-toggle" id="mobile_toggle" aria-label="Menu Navigasi">☰</button>
+        <div class="breadcrumbs">
+          <span class="crumb-home">MK Sistem Digital</span>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-active" id="crumb_active_week">Minggu 1</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button class="quick-action-btn" onclick="switchSubmenu(AppState.activeWeek, AppState.activeWeek === 1 ? 'sub_1_5' : 'sub_2_5')">
+          📝 Latihan & Kuis
+        </button>
+        <button class="quick-action-btn primary" onclick="switchWeek(1); switchSubmenu(1, 'sub_1_3');">
+          ⭐ Central Binary Hub
+        </button>
+      </div>
+    </header>
+
+    <!-- Submenu Tabs for Week 1 -->
+    <nav class="submenu-nav-wrapper" id="subnav_week_1">
+      <button class="submenu-tab-btn" data-parent-week="1" data-target-sub="sub_1_1">
+        <span class="tab-icon">💡</span> 1.1 Dasar & Sifat Diskrit
+      </button>
+      <button class="submenu-tab-btn" data-parent-week="1" data-target-sub="sub_1_2">
+        <span class="tab-icon">📐</span> 1.2 Anatomi Bilangan Digital
+      </button>
+      <button class="submenu-tab-btn active" data-parent-week="1" data-target-sub="sub_1_3">
+        <span class="tab-icon">⭐</span> 1.3 Central Binary Hub
+      </button>
+      <button class="submenu-tab-btn" data-parent-week="1" data-target-sub="sub_1_4">
+        <span class="tab-icon">🔢</span> 1.4 Bilangan Pecahan
+      </button>
+      <button class="submenu-tab-btn" data-parent-week="1" data-target-sub="sub_1_5">
+        <span class="tab-icon">📝</span> 1.5 Latihan & Evaluasi
+      </button>
+    </nav>
+
+    <!-- Submenu Tabs for Week 2 -->
+    <nav class="submenu-nav-wrapper" id="subnav_week_2" style="display:none;">
+      <button class="submenu-tab-btn active" data-parent-week="2" data-target-sub="sub_2_1">
+        <span class="tab-icon">⚖️</span> 2.1 Tiga Skema Bertanda
+      </button>
+      <button class="submenu-tab-btn" data-parent-week="2" data-target-sub="sub_2_2">
+        <span class="tab-icon">🔄</span> 2.2 Algoritma 3 Langkah C2
+      </button>
+      <button class="submenu-tab-btn" data-parent-week="2" data-target-sub="sub_2_3">
+        <span class="tab-icon">🌐</span> 2.3 Negatif dalam Hex & Oktal
+      </button>
+      <button class="submenu-tab-btn" data-parent-week="2" data-target-sub="sub_2_4">
+        <span class="tab-icon">🧮</span> 2.4 Aritmatika & Overflow
+      </button>
+      <button class="submenu-tab-btn" data-parent-week="2" data-target-sub="sub_2_5">
+        <span class="tab-icon">📝</span> 2.5 Latihan Modul 2
+      </button>
+    </nav>
+
+    <!-- Content Viewport -->
+    <main class="content-viewport">
+
+      <!-- ################################################################
+           WEEK 1 PANEL (PENDAHULUAN & CENTRAL BINARY CONVERSION)
+           ################################################################ -->
+      <section class="week-panel active" id="week_panel_1" data-week="1">
+        
+        <!-- Hero Header -->
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 1 • Semester Ganjil</span>
+          <h1 class="hero-title">Pendahuluan Sistem Digital & Konversi Bilangan</h1>
+          <p class="hero-subtitle">
+            Mempelajari konsep fundamental sistem bilangan komputasi dengan <strong>Metode Central Binary</strong>: 
+            menjadikan sistem biner sebagai jembatan konversi antar basis (Desimal, Oktal, dan Heksadesimal) melalui pengelompokan bit dan pembobotan matematis.
+          </p>
+          <div class="hero-tags-row">
+            <span class="hero-tag">🎯 CPMK: Konversi Bilangan</span>
+            <span class="hero-tag">💡 Radix: 2, 8, 10, 16</span>
+            <span class="hero-tag">⚡ Grouping: 4-bit (Hex) & 3-bit (Oktal)</span>
+            <span class="hero-tag">🔬 Bilangan Pecahan (Radix Point)</span>
+          </div>
+        </div>
+
+        <!-- 1.1 Dasar & Karakteristik -->
+        <div class="subtopic-panel" id="sub_1_1">
+          <div class="grid-2">
+            <div class="card-glass">
+              <div class="card-header-row">
+                <div class="card-title-group">
+                  <div class="card-icon-box">📘</div>
+                  <div>
+                    <h2 class="card-title">Definisi & Karakteristik</h2>
+                    <span class="card-subtitle">Slide 04 - Modul ITERA</span>
+                  </div>
+                </div>
+              </div>
+              <p style="color:var(--text-secondary); margin-bottom:14px;">
+                <strong>Sistem Digital</strong> adalah sistem yang memproses data berbasis angka biner (0 dan 1) untuk pengolahan informasi dengan akurasi dan keandalan tinggi.
+              </p>
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <div style="background:var(--bg-elevated); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-cyan);">
+                  <strong style="color:#ffffff;">Keandalan (Reliability):</strong>
+                  <p style="font-size:0.88rem; color:var(--text-muted); margin-top:4px;">
+                    Mengurangi galat/kesalahan yang sering terjadi pada sistem analog akibat gangguan kebisingan (noise) eksternal.
+                  </p>
+                </div>
+                <div style="background:var(--bg-elevated); padding:14px; border-radius:var(--radius-md); border-left:3px solid var(--accent-blue);">
+                  <strong style="color:#ffffff;">Discrete Nature:</strong>
+                  <p style="font-size:0.88rem; color:var(--text-muted); margin-top:4px;">
+                    Bekerja dengan data diskrit (terputus), bukan kontinu, sehingga jauh lebih mudah disimpan, diproses logika, dan ditransmisikan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-glass">
+              <div class="card-header-row">
+                <div class="card-title-group">
+                  <div class="card-icon-box">⚖️</div>
+                  <div>
+                    <h2 class="card-title">Sistem Analog vs Sistem Digital</h2>
+                    <span class="card-subtitle">Slide 05 - Komparasi Fundamental</span>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div style="background:var(--bg-elevated); padding:12px 16px; border-radius:var(--radius-sm);">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                    <strong style="color:var(--accent-cyan);">Prinsip Kerja</strong>
+                  </div>
+                  <p style="font-size:0.85rem; color:var(--text-secondary);">
+                    Analog memproses sinyal kontinu (misal: gelombang suara). Digital menggunakan sinyal diskrit berkode biner 0 dan 1.
+                  </p>
+                </div>
+                <div style="background:var(--bg-elevated); padding:12px 16px; border-radius:var(--radius-sm);">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                    <strong style="color:var(--accent-emerald);">Akurasi & Ketahanan</strong>
+                  </div>
+                  <p style="font-size:0.85rem; color:var(--text-secondary);">
+                    Sistem digital kebal distorsi transmisi karena ambang tegangan hanya membedakan logika LOW (0) dan HIGH (1).
+                  </p>
+                </div>
+                <div style="background:var(--bg-elevated); padding:12px 16px; border-radius:var(--radius-sm);">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                    <strong style="color:var(--accent-purple);">Domain Aplikasi</strong>
+                  </div>
+                  <p style="font-size:0.85rem; color:var(--text-secondary);">
+                    Ponsel pintar, IoT, kecerdasan buatan (AI), smart home, mikroprosesor, sistem kontrol otomasi modern.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.2 Anatomi Bilangan Digital -->
+        <div class="subtopic-panel" id="sub_1_2">
+          <div class="card-glass">
+            <div class="card-header-row">
+              <div class="card-title-group">
+                <div class="card-icon-box">📐</div>
+                <div>
+                  <h2 class="card-title">Anatomi Bilangan Biner & Hirarki Penyimpanan</h2>
+                  <span class="card-subtitle">Slide 28 & 29 - Radix, Bit, Nibble, Byte, Word</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-4" style="margin-bottom:24px;">
+              <div style="background:var(--bg-elevated); padding:18px; border-radius:var(--radius-md); text-align:center; border:1px solid var(--border-subtle);">
+                <span style="color:var(--accent-cyan); font-weight:700; font-size:0.75rem; text-transform:uppercase;">1 Bit</span>
+                <h3 style="font-size:1.4rem; margin:6px 0;">Binary Digit</h3>
+                <p style="font-size:0.8rem; color:var(--text-muted);">Nilai 0 atau 1 (keadaan LOW / HIGH sirkuit).</p>
+              </div>
+              <div style="background:var(--bg-elevated); padding:18px; border-radius:var(--radius-md); text-align:center; border:1px solid rgba(6, 182, 212, 0.4);">
+                <span style="color:var(--accent-cyan); font-weight:700; font-size:0.75rem; text-transform:uppercase;">4 Bit</span>
+                <h3 style="font-size:1.4rem; margin:6px 0;">Nibble</h3>
+                <p style="font-size:0.8rem; color:var(--text-muted);">Tepat setara dengan 1 digit <strong>Heksadesimal</strong> (0-F).</p>
+              </div>
+              <div style="background:var(--bg-elevated); padding:18px; border-radius:var(--radius-md); text-align:center; border:1px solid var(--border-subtle);">
+                <span style="color:var(--accent-emerald); font-weight:700; font-size:0.75rem; text-transform:uppercase;">8 Bit</span>
+                <h3 style="font-size:1.4rem; margin:6px 0;">Byte (Octet)</h3>
+                <p style="font-size:0.8rem; color:var(--text-muted);">2 Nibble, mampu menampung 256 kombinasi (0 s.d. 255).</p>
+              </div>
+              <div style="background:var(--bg-elevated); padding:18px; border-radius:var(--radius-md); text-align:center; border:1px solid var(--border-subtle);">
+                <span style="color:var(--accent-purple); font-weight:700; font-size:0.75rem; text-transform:uppercase;">16 / 32 / 64 Bit</span>
+                <h3 style="font-size:1.4rem; margin:6px 0;">Word / DWord</h3>
+                <p style="font-size:0.8rem; color:var(--text-muted);">Lebar register standar pada arsitektur CPU/MCU.</p>
+              </div>
+            </div>
+
+            <!-- Positional Value Diagram -->
+            <div style="background:var(--bg-input); padding:20px; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <span style="font-size:0.85rem; color:var(--accent-rose); font-weight:700;">← MSB (Most Significant Bit)</span>
+                <span style="font-size:0.85rem; color:var(--accent-cyan); font-weight:700;">Posisi Titik Radix (Binary Point)</span>
+                <span style="font-size:0.85rem; color:var(--accent-emerald); font-weight:700;">LSB (Least Significant Bit) →</span>
+              </div>
+              <div style="display:flex; justify-content:center; gap:8px; font-family:var(--font-mono); font-size:1.1rem; flex-wrap:wrap;">
+                <div style="text-align:center; padding:8px 12px; background:var(--bg-elevated); border-radius:6px;">2³ = 8</div>
+                <div style="text-align:center; padding:8px 12px; background:var(--bg-elevated); border-radius:6px;">2² = 4</div>
+                <div style="text-align:center; padding:8px 12px; background:var(--bg-elevated); border-radius:6px;">2¹ = 2</div>
+                <div style="text-align:center; padding:8px 12px; background:var(--bg-elevated); border-radius:6px;">2⁰ = 1</div>
+                <div style="font-size:1.8rem; color:var(--accent-cyan); line-height:1;">.</div>
+                <div style="text-align:center; padding:8px 12px; background:var(--bg-elevated); border-radius:6px; color:var(--text-muted);">2⁻¹ = 0.5</div>
+                <div style="text-align:center; padding:8px 12px; background:var(--bg-elevated); border-radius:6px; color:var(--text-muted);">2⁻² = 0.25</div>
+                <div style="text-align:center; padding:8px 12px; background:var(--bg-elevated); border-radius:6px; color:var(--text-muted);">2⁻³ = 0.125</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.3 CENTRAL BINARY HUB (FITUR UTAMA) -->
+        <div class="subtopic-panel active" id="sub_1_3">
+          
+          <!-- Interactive Central Hub Container -->
+          <div class="central-hub-container">
+            <div class="central-hub-header">
+              <span class="hub-eyebrow">Interactive Learning Simulator</span>
+              <h2 class="hub-title">Central Binary Hub & Visual Converter</h2>
+              <p class="hub-desc">
+                Metode konversi sentral: bilangan dikonversikan ke <strong>Biner</strong> terlebih dahulu, lalu di-grouping menjadi 
+                <strong>4-bit untuk Heksadesimal</strong>, <strong>3-bit untuk Oktal</strong>, dan dijumlahkan bobotnya untuk <strong>Desimal</strong>.
+              </p>
+            </div>
+
+            <!-- Pipeline Flow Diagram -->
+            <div class="hub-pipeline-visual">
+              <div class="pipeline-node" id="pipeline_node_source">
+                <div class="pipeline-node-badge">Input (Basis 10)</div>
+                <div class="pipeline-node-val">25</div>
+              </div>
+              <div class="pipeline-arrow">
+                <span>➔</span>
+                <span class="pipeline-arrow-label">Bridge</span>
+              </div>
+              <div class="pipeline-node center-hub" id="pipeline_node_binary">
+                <div class="pipeline-node-badge">⭐ CENTRAL BINARY</div>
+                <div class="pipeline-node-val">11001₂</div>
+              </div>
+              <div class="pipeline-arrow">
+                <span>➔</span>
+                <span class="pipeline-arrow-label">Grouping</span>
+              </div>
+              <div class="pipeline-node">
+                <div class="pipeline-node-badge">Target Sistem</div>
+                <div style="display:flex; flex-direction:column; gap:4px; font-size:0.85rem; font-family:var(--font-mono);">
+                  <div>Hex: <strong id="pipeline_node_hex" style="color:var(--accent-purple);">19₁₆</strong></div>
+                  <div>Oct: <strong id="pipeline_node_oct" style="color:var(--accent-amber);">31₈</strong></div>
+                  <div>Dec: <strong id="pipeline_node_dec" style="color:var(--accent-emerald);">25₁₀</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Controls Card -->
+            <div class="hub-input-card">
+              <div class="input-controls-grid">
+                <div class="form-group">
+                  <label class="form-label" for="hub_base_select">Basis Bilangan Asal:</label>
+                  <select class="select-custom" id="hub_base_select">
+                    <option value="10" selected>Desimal (Basis 10)</option>
+                    <option value="2">Biner (Basis 2)</option>
+                    <option value="8">Oktal (Basis 8)</option>
+                    <option value="16">Heksadesimal (Basis 16)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hub_input_val">Masukkan Nilai (Mendukung Bulat & Pecahan):</label>
+                  <input type="text" class="input-custom" id="hub_input_val" value="25" placeholder="Contoh: 25, 125, 0.625, 2F">
+                </div>
+                <div>
+                  <button class="quick-action-btn primary" onclick="triggerHubCalculation()" style="height:48px;">
+                    ⚡ Konversi Sekarang
+                  </button>
+                </div>
+              </div>
+
+              <!-- Quick Presets from Slides -->
+              <div class="preset-pills-row">
+                <span class="preset-title">Preset Contoh Modul ITERA:</span>
+                <button class="preset-btn" onclick="setHubPreset('25', 10)">25₁₀ (Slide 30)</button>
+                <button class="preset-btn" onclick="setHubPreset('125', 10)">125₁₀ (Slide 31)</button>
+                <button class="preset-btn" onclick="setHubPreset('7562', 10)">7562₁₀ (Slide 32)</button>
+                <button class="preset-btn" onclick="setHubPreset('2F', 16)">2F₁₆ (Slide 32)</button>
+                <button class="preset-btn" onclick="setHubPreset('0.625', 10)">0.625₁₀ Pecahan (Slide 35)</button>
+                <button class="preset-btn" onclick="setHubPreset('258', 10)">258₁₀ Soal (Slide 37)</button>
+              </div>
+              <div id="hub_error_msg" style="display:none; color:var(--accent-rose); font-size:0.85rem; margin-top:10px;"></div>
+            </div>
+
+            <!-- Grouping 4-bit (Nibble) to Hexadecimal Card -->
+            <div class="grouping-display-card">
+              <div class="card-header-row" style="margin-bottom:12px;">
+                <div class="card-title-group">
+                  <div class="card-icon-box" style="background:rgba(139, 92, 246, 0.15); color:var(--accent-purple);">⬡</div>
+                  <div>
+                    <h3 class="card-title" style="font-size:1.15rem;">Grouping 4-Bit (Nibble) ke Heksadesimal</h3>
+                    <span class="card-subtitle">Dikelompokkan per 4 bit dari LSB (kanan ke kiri). Jika bit paling kiri kurang, tambahkan padding 0.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="group-blocks-row" id="hex_group_blocks"></div>
+            </div>
+
+            <!-- Grouping 3-bit to Octal Card -->
+            <div class="grouping-display-card">
+              <div class="card-header-row" style="margin-bottom:12px;">
+                <div class="card-title-group">
+                  <div class="card-icon-box" style="background:rgba(245, 158, 11, 0.15); color:var(--accent-amber);">⬢</div>
+                  <div>
+                    <h3 class="card-title" style="font-size:1.15rem;">Grouping 3-Bit ke Oktal</h3>
+                    <span class="card-subtitle">Dikelompokkan per 3 bit dari LSB. Jika grup paling kiri kurang dari 3 bit, tambahkan padding 0.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="group-blocks-row" id="octal_group_blocks"></div>
+            </div>
+
+            <!-- Positional Weights for Decimal Card -->
+            <div class="grouping-display-card">
+              <div class="card-header-row" style="margin-bottom:12px;">
+                <div class="card-title-group">
+                  <div class="card-icon-box" style="background:rgba(16, 185, 129, 0.15); color:var(--accent-emerald);">∑</div>
+                  <div>
+                    <h3 class="card-title" style="font-size:1.15rem;">Penjumlahan Bobot Pangkat 2 ke Desimal</h3>
+                    <span class="card-subtitle">Setiap bit bernilai 1 menyumbang bobot 2ⁿ ke total desimal: ∑ (bᵢ × 2ⁱ).</span>
+                  </div>
+                </div>
+              </div>
+              <div id="decimal_weights_container"></div>
+            </div>
+
+            <!-- Interactive Bit Switch Board (8-bit register) -->
+            <div class="bit-board-container">
+              <div class="board-top-meta">
+                <div class="board-title-wrap">
+                  <h4>
+                    <span>🕹️</span> Papan Sakelar Register 8-Bit Interaktif (Live Bit Switcher)
+                  </h4>
+                  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
+                    Klik sakelar bit di bawah untuk mengubah nilai 0/1 secara langsung dan lihat perubahannya ke seluruh basis bilangan.
+                  </p>
+                </div>
+                <div class="board-actions">
+                  <button class="board-action-btn" onclick="setBoardPattern('CLEAR')">Clear (0)</button>
+                  <button class="board-action-btn" onclick="setBoardPattern('SET_ALL')">Set All (255)</button>
+                  <button class="board-action-btn" onclick="setBoardPattern('INVERT')">Invert (NOT)</button>
+                  <button class="board-action-btn" onclick="setBoardPattern('ALTERNATE')">10101010</button>
+                  <button class="board-action-btn" onclick="setBoardPattern('INC')">+1 (INC)</button>
+                </div>
+              </div>
+
+              <!-- Bit Switches -->
+              <div class="bit-cells-scroll">
+                <div class="bit-cells-row" id="bit_cells_row"></div>
+              </div>
+
+              <!-- Live Register Readout -->
+              <div style="display:flex; justify-content:space-around; background:var(--bg-input); padding:14px; border-radius:var(--radius-sm); margin-top:12px; font-family:var(--font-mono); font-size:0.9rem;">
+                <div>Heksadesimal: <strong id="board_res_hex" style="color:var(--accent-purple);">0x19</strong></div>
+                <div>Oktal: <strong id="board_res_oct" style="color:var(--accent-amber);">0o031</strong></div>
+                <div>Desimal: <strong id="board_res_dec" style="color:var(--accent-emerald);">25</strong></div>
+              </div>
+            </div>
+
+            <!-- Step-by-Step Mathematical Explanation -->
+            <div class="step-container">
+              <h3 style="font-size:1.15rem; margin-bottom:16px;">📚 Langkah Matematis Lengkap (Step-by-Step Breakdown)</h3>
+              <div id="step_by_step_container"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 1.4 Bilangan Pecahan (Fractional Numbers) -->
+        <div class="subtopic-panel" id="sub_1_4">
+          <div class="card-glass">
+            <div class="card-header-row">
+              <div class="card-title-group">
+                <div class="card-icon-box">🔢</div>
+                <div>
+                  <h2 class="card-title">Bilangan Pecahan dalam Sistem Digital</h2>
+                  <span class="card-subtitle">Slide 34, 35, 36 - Modul ITERA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <h3 style="font-size:1.05rem; color:var(--accent-cyan); margin-bottom:8px;">Metode Perkalian Berulang dengan 2</h3>
+                <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin-bottom:14px;">
+                  Untuk mengubah desimal pecahan ke biner, kalikan bagian pecahan secara berulang dengan 2. Ambil angka bulat hasil perkalian sebagai digit biner pecahan dari atas ke bawah.
+                </p>
+                <div class="step-math-box">
+                  <strong>Contoh Modul: 0.625₁₀ → Biner</strong><br>
+                  • 0.625 × 2 = 1.25 → Simpan <strong>1</strong><br>
+                  • 0.25 × 2 = 0.50 → Simpan <strong>0</strong><br>
+                  • 0.50 × 2 = 1.00 → Simpan <strong>1</strong><br>
+                  Hasil: <strong>(0.625)₁₀ = (0.101)₂</strong>
+                </div>
+              </div>
+
+              <div>
+                <h3 style="font-size:1.05rem; color:var(--accent-purple); margin-bottom:8px;">Grouping Pecahan ke Hex & Oktal (Padding Kanan)</h3>
+                <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin-bottom:14px;">
+                  Berbeda dari bilangan bulat yang di-padding nol di kiri, bilangan pecahan <strong>dikelompokkan dari titik radix ke kanan</strong>. Bila digit kurang, <strong>tambahkan nol di belakang (kanan)</strong>!
+                </p>
+                <div class="step-math-box">
+                  <strong>Contoh Modul: 0.101₂ ke Heksadesimal</strong><br>
+                  • Ambil 4 bit: 0.101₂ → tambah 0 di belakang → <strong>0.1010₂</strong><br>
+                  • 1010₂ = A₁₆<br>
+                  Jadi <strong>0.625₁₀ = 0.A₁₆</strong><br><br>
+                  <strong>Contoh Modul: 0.101₂ ke Oktal</strong><br>
+                  • Ambil 3 bit: 0.101₂ (pas 3 bit) = <strong>5₈</strong><br>
+                  Jadi <strong>0.625₁₀ = 0.5₈</strong>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:24px; text-align:center;">
+              <button class="quick-action-btn primary" onclick="setHubPreset('0.625', 10); switchSubmenu(1, 'sub_1_3');">
+                🔍 Buka 0.625 di Central Binary Hub Simulator
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.5 Latihan & Kuis Minggu 1 -->
+        <div class="subtopic-panel" id="sub_1_5">
+          <div class="card-glass">
+            <div class="card-header-row">
+              <div class="card-title-group">
+                <div class="card-icon-box">📝</div>
+                <div>
+                  <h2 class="card-title">Latihan Terstruktur Modul Minggu 1</h2>
+                  <span class="card-subtitle">Soal resmi dari Slide 37, 35, 36 & 32 ITERA</span>
+                </div>
+              </div>
+            </div>
+            <div id="quiz_container_w1"></div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ################################################################
+           WEEK 2 PANEL (REPRESENTASI BERTANDA & ARITMATIKA C2)
+           ################################################################ -->
+      <section class="week-panel" id="week_panel_2" data-week="2">
+        
+        <!-- Hero Header -->
+        <div class="hero-banner" style="background:linear-gradient(135deg, rgba(20, 15, 36, 0.95), rgba(30, 22, 54, 0.9));">
+          <span class="hero-meta-badge" style="color:var(--accent-purple); border-color:rgba(139, 92, 246, 0.3);">Pertemuan 2 • Semester Ganjil</span>
+          <h1 class="hero-title">Representasi Bilangan Negatif & Aritmatika Biner</h1>
+          <p class="hero-subtitle">
+            Mempelajari skema representasi bilangan bertanda: <strong>Sign-Magnitude</strong>, <strong>1's Complement (C1)</strong>, dan standar industri CPU/MCU <strong>2's Complement (C2)</strong>, serta teknik pengurangan via penjumlahan adder dan deteksi overflow.
+          </p>
+          <div class="hero-tags-row">
+            <span class="hero-tag">🎯 CPMK-2: Operasi Bilangan Negatif</span>
+            <span class="hero-tag">⚙️ Two's Complement (C2)</span>
+            <span class="hero-tag">➕ A - B = A + C2(B)</span>
+            <span class="hero-tag">⚠️ Overflow Flag (V)</span>
+          </div>
+        </div>
+
+        <!-- 2.1 Tiga Skema Bertanda -->
+        <div class="subtopic-panel active" id="sub_2_1">
+          <div class="scheme-comparison-grid">
+            
+            <!-- SM Card -->
+            <div class="scheme-card">
+              <div class="scheme-card-header">
+                <span class="scheme-badge">Skema 1</span>
+                <span style="font-size:0.75rem; color:var(--text-muted);">Slide 08</span>
+              </div>
+              <h3 style="font-size:1.2rem; margin-bottom:6px;">Sign-Magnitude (SM)</h3>
+              <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">
+                Bit paling kiri (MSB) sebagai tanda (0 = +, 1 = -). Sisa $n-1$ bit merupakan magnitudo absolut.
+              </p>
+              <div class="scheme-formula-badge">
+                Rentang 8-bit: -127 ... +127<br>
+                Kelemahan: Ada dua nol (+0 dan -0)
+              </div>
+              <div style="background:var(--bg-input); padding:10px; border-radius:6px; font-family:var(--font-mono); font-size:0.85rem;">
+                +13 = 0000 1101₂<br>
+                -13 = <strong style="color:var(--accent-rose);">1</strong>000 1101₂
+              </div>
+            </div>
+
+            <!-- C1 Card -->
+            <div class="scheme-card">
+              <div class="scheme-card-header">
+                <span class="scheme-badge" style="color:var(--accent-blue);">Skema 2</span>
+                <span style="font-size:0.75rem; color:var(--text-muted);">Slide 09</span>
+              </div>
+              <h3 style="font-size:1.2rem; margin-bottom:6px;">1's Complement (C1)</h3>
+              <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">
+                Bentuk negatif diperoleh dengan membalik (inversi/NOT) semua bit representasi positifnya.
+              </p>
+              <div class="scheme-formula-badge" style="border-left-color:var(--accent-blue);">
+                Rentang 8-bit: -127 ... +127<br>
+                Masih memiliki dua nol (+0 dan -0)
+              </div>
+              <div style="background:var(--bg-input); padding:10px; border-radius:6px; font-family:var(--font-mono); font-size:0.85rem;">
+                +13 = 0000 1101₂<br>
+                -13 = <strong style="color:var(--accent-blue);">1111 0010₂</strong>
+              </div>
+            </div>
+
+            <!-- C2 Card -->
+            <div class="scheme-card highlight">
+              <div class="scheme-card-header">
+                <span class="scheme-badge" style="background:rgba(16, 185, 129, 0.15); color:var(--accent-emerald);">Standar CPU</span>
+                <span style="font-size:0.75rem; color:var(--text-muted);">Slide 10</span>
+              </div>
+              <h3 style="font-size:1.2rem; margin-bottom:6px; color:#ffffff;">2's Complement (C2)</h3>
+              <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">
+                Bentuk negatif adalah inversi semua bit ditambah 1 (NOT + 1). Standar arsitektur komputer modern.
+              </p>
+              <div class="scheme-formula-badge" style="border-left-color:var(--accent-emerald);">
+                Rentang 8-bit: <strong>-128 ... +127</strong><br>
+                Keunggulan: <strong>Hanya satu nol</strong> & aritmatika sederhana
+              </div>
+              <div style="background:var(--bg-input); padding:10px; border-radius:6px; font-family:var(--font-mono); font-size:0.85rem;">
+                +13 = 0000 1101₂<br>
+                -13 = <strong style="color:var(--accent-emerald);">1111 0011₂</strong>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Calculator for 3 Schemes -->
+          <div class="card-glass">
+            <h3 style="font-size:1.15rem; margin-bottom:14px;">🎛️ Komparasi Langsung 3 Skema (Live Value Tester)</h3>
+            <div style="display:flex; gap:16px; align-items:flex-end; flex-wrap:wrap; margin-bottom:18px;">
+              <div class="form-group" style="flex:1; min-width:220px;">
+                <label class="form-label" for="comp_input_val">Masukkan Angka Desimal Bertanda (-128 s.d. +127):</label>
+                <input type="number" class="input-custom" id="comp_input_val" value="-13" min="-128" max="127">
+              </div>
+              <button class="quick-action-btn primary" onclick="triggerComplementCalculation()" style="height:48px;">
+                Hitung Representasi
+              </button>
+            </div>
+            <div id="comp_error_msg" style="display:none; color:var(--accent-rose); font-size:0.85rem; margin-bottom:12px;"></div>
+
+            <div class="preset-pills-row" style="margin-bottom:18px;">
+              <span class="preset-title">Preset Slide:</span>
+              <button class="preset-btn" onclick="setCompPreset(-13)">-13 (Slide 12)</button>
+              <button class="preset-btn" onclick="setCompPreset(-37)">-37 (Slide 12)</button>
+              <button class="preset-btn" onclick="setCompPreset(-58)">-58 (Slide 23)</button>
+              <button class="preset-btn" onclick="setCompPreset(-128)">-128 Batas Bawah</button>
+              <button class="preset-btn" onclick="setCompPreset(-1)">-1 (All 1s)</button>
+            </div>
+
+            <div class="grid-3">
+              <div style="background:var(--bg-elevated); padding:14px; border-radius:8px;">
+                <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">SIGN-MAGNITUDE</div>
+                <div id="card_sm_bits" style="font-family:var(--font-mono); font-size:1.2rem; font-weight:700; color:#ffffff; margin-top:6px;">1000 1101</div>
+              </div>
+              <div style="background:var(--bg-elevated); padding:14px; border-radius:8px;">
+                <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">1's COMPLEMENT</div>
+                <div id="card_c1_bits" style="font-family:var(--font-mono); font-size:1.2rem; font-weight:700; color:var(--accent-blue); margin-top:6px;">1111 0010</div>
+              </div>
+              <div style="background:var(--bg-elevated); padding:14px; border-radius:8px; border:1px solid rgba(16, 185, 129, 0.4);">
+                <div style="font-size:0.75rem; color:var(--accent-emerald); font-weight:700;">2's COMPLEMENT (C2)</div>
+                <div id="card_c2_bits" style="font-family:var(--font-mono); font-size:1.2rem; font-weight:700; color:var(--accent-emerald); margin-top:6px;">1111 0011</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.2 Algoritma 3 Langkah 2's Complement -->
+        <div class="subtopic-panel" id="sub_2_2">
+          <div class="c2-pipeline-card">
+            <h3 style="font-size:1.3rem; margin-bottom:8px;">Algoritma 3-Langkah Konversi ke 2's Complement</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:20px;">
+              Untuk menulis bilangan negatif $-X$ dalam $n$-bit 2's complement, ikuti 3 langkah baku:
+            </p>
+
+            <div class="pipeline-steps-3">
+              <div class="c2-step-node">
+                <div class="c2-step-tag">Langkah 1: Tulis Positif</div>
+                <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:8px;">Tulis |X| dalam n-bit biner</div>
+                <div class="c2-step-bits" id="c2_step1_bits">0000 1101</div>
+              </div>
+              <div class="pipeline-arrow" style="color:var(--accent-purple);">➔</div>
+              <div class="c2-step-node">
+                <div class="c2-step-tag">Langkah 2: Inversi (NOT)</div>
+                <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:8px;">Ubah 0 jadi 1, 1 jadi 0</div>
+                <div class="c2-step-bits" id="c2_step2_bits" style="color:var(--accent-amber);">1111 0010</div>
+              </div>
+              <div class="pipeline-arrow" style="color:var(--accent-purple);">➔</div>
+              <div class="c2-step-node" style="border-color:var(--accent-emerald);">
+                <div class="c2-step-tag" style="color:var(--accent-emerald);">Langkah 3: Tambah 1 (+1)</div>
+                <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:8px;">Tambahkan 1 pada LSB</div>
+                <div class="c2-step-bits" id="c2_step3_bits" style="color:var(--accent-emerald);">1111 0011</div>
+              </div>
+            </div>
+
+            <!-- Rumus Cepat Slide 13 -->
+            <div style="background:var(--bg-elevated); padding:18px; border-radius:var(--radius-md); margin-top:24px; border-left:4px solid var(--accent-cyan);">
+              <h4 style="font-size:1rem; color:var(--accent-cyan); margin-bottom:6px;">Rumus Nilai & Trik Cepat Mengubah C2 ke Desimal (Slide 13):</h4>
+              <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+                Bila MSB = 1 (negatif), nilai desimal dapat dihitung seketika dengan rumus: 
+                <strong style="color:#ffffff; font-family:var(--font-mono);">Nilai = -(2ⁿ - U)</strong>, di mana $U$ adalah nilai desimal unsigned biner tersebut.<br>
+                <em>Contoh:</em> 1110 0110₂ (8-bit) → $U = 128 + 64 + 32 + 4 + 2 = 230$.<br>
+                Nilai = $-(256 - 230) = \mathbf{-26_{10}}$.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.3 Negatif dalam Hex & Oktal -->
+        <div class="subtopic-panel" id="sub_2_3">
+          <div class="card-glass">
+            <div class="card-header-row">
+              <div class="card-title-group">
+                <div class="card-icon-box">🌐</div>
+                <div>
+                  <h2 class="card-title">Negatif dalam Heksadesimal & Oktal</h2>
+                  <span class="card-subtitle">Slide 14, 15, 16, 20 - Modul ITERA</span>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; margin-bottom:18px;">
+              Untuk menulis bilangan negatif $x < 0$ dalam heksadesimal atau oktal, tentukan lebar bit $n$ terlebih dahulu lalu gunakan rumus:
+              <strong style="color:var(--accent-cyan); font-family:var(--font-mono);">Hex/Oct = 2ⁿ - |x|</strong>
+            </p>
+
+            <div class="grid-2">
+              <div style="background:var(--bg-elevated); padding:18px; border-radius:var(--radius-md);">
+                <h4 style="font-size:1rem; margin-bottom:10px; color:var(--accent-purple);">Contoh 8-Bit (2⁸ = 256):</h4>
+                <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-family:var(--font-mono); font-size:0.88rem;">
+                  <li>• -26: 256 - 26 = 230 = <strong>0xE6</strong> → <strong>0o346</strong></li>
+                  <li>• -37: 256 - 37 = 219 = <strong>0xDB</strong> → <strong>0o333</strong></li>
+                  <li>• -1:  256 - 1  = 255 = <strong>0xFF</strong> → <strong>0o377</strong></li>
+                  <li>• -128 (batas): 256 - 128 = 128 = <strong>0x80</strong> → <strong>0o200</strong></li>
+                </ul>
+              </div>
+
+              <div style="background:var(--bg-elevated); padding:18px; border-radius:var(--radius-md);">
+                <h4 style="font-size:1rem; margin-bottom:10px; color:var(--accent-cyan);">Sign Extension (Slide 20):</h4>
+                <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; margin-bottom:10px;">
+                  Saat memperlebar tipe bertanda (misal 8-bit ke 16-bit), <strong>salin bit tanda (MSB)</strong> ke bit-bit kiri yang baru.
+                </p>
+                <div style="background:var(--bg-input); padding:10px 14px; border-radius:6px; font-family:var(--font-mono); font-size:0.82rem;">
+                  -37 (8-bit)  : 1101 1011₂<br>
+                  -37 (16-bit) : <strong style="color:var(--accent-cyan);">1111 1111</strong> 1101 1011₂
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Readout for current selection -->
+            <div style="margin-top:20px; background:var(--bg-input); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:6px;">HASIL UNTUK NILAI AKTIF DI ATAS:</div>
+              <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:var(--font-mono);">
+                <div>Hexadesimal: <strong id="c2_hex_val" style="color:var(--accent-purple);">0xE6</strong></div>
+                <div>Oktal: <strong id="c2_oct_val" style="color:var(--accent-amber);">0o346</strong></div>
+                <div>Sign Ext (16-bit): <strong id="c2_ext16_val" style="color:var(--accent-cyan);">1111 1111 1111 0011</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.4 Simulator Aritmatika & Overflow C2 -->
+        <div class="subtopic-panel" id="sub_2_4">
+          <div class="adder-sim-card">
+            <div class="card-header-row">
+              <div class="card-title-group">
+                <div class="card-icon-box" style="background:rgba(59, 130, 246, 0.15); color:var(--accent-blue);">🧮</div>
+                <div>
+                  <h2 class="card-title">Simulator Aritmatika Biner & Pengurangan via C2</h2>
+                  <span class="card-subtitle">A - B = A + [C2 dari B] (Slide 17, 18, 19 ITERA)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Controls -->
+            <div style="display:grid; grid-template-columns:1fr 140px 1fr auto; gap:14px; align-items:flex-end; margin-bottom:20px;">
+              <div class="form-group">
+                <label class="form-label" for="arith_val_a">Operand A (Desimal):</label>
+                <input type="number" class="input-custom" id="arith_val_a" value="75" min="-128" max="127">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="arith_op_select">Operasi:</label>
+                <select class="select-custom" id="arith_op_select">
+                  <option value="SUB" selected>Pengurangan (-)</option>
+                  <option value="ADD">Penjumlahan (+)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="arith_val_b">Operand B (Desimal):</label>
+                <input type="number" class="input-custom" id="arith_val_b" value="103" min="-128" max="127">
+              </div>
+              <button class="quick-action-btn primary" onclick="triggerArithmeticCalculation()" style="height:48px;">
+                Hitung Adder
+              </button>
+            </div>
+
+            <!-- Preset Buttons for Slide Calculations -->
+            <div class="preset-pills-row" style="margin-bottom:18px;">
+              <span class="preset-title">Kasus Khusus Slide ITERA:</span>
+              <button class="preset-btn" onclick="document.getElementById('arith_val_a').value='18'; document.getElementById('arith_val_b').value='25'; document.getElementById('arith_op_select').value='SUB'; triggerArithmeticCalculation();">18 - 25 = -7 (Slide 18)</button>
+              <button class="preset-btn" onclick="document.getElementById('arith_val_a').value='75'; document.getElementById('arith_val_b').value='103'; document.getElementById('arith_op_select').value='SUB'; triggerArithmeticCalculation();">75 - 103 = -28 (Slide 23 Latihan)</button>
+              <button class="preset-btn" onclick="document.getElementById('arith_val_a').value='100'; document.getElementById('arith_val_b').value='60'; document.getElementById('arith_op_select').value='ADD'; triggerArithmeticCalculation();">+100 + +60 (Slide 19 Overflow!)</button>
+              <button class="preset-btn" onclick="document.getElementById('arith_val_a').value='-100'; document.getElementById('arith_val_b').value='-50'; document.getElementById('arith_op_select').value='ADD'; triggerArithmeticCalculation();">-100 + -50 (Slide 19 Overflow!)</button>
+            </div>
+
+            <!-- Calculation Register Board -->
+            <div class="adder-calc-board">
+              <div class="calc-row carry-row">
+                <span>Carry:</span>
+                <span id="arith_row_carry">0 0 0 0 0 0 0 0</span>
+              </div>
+              <div class="calc-row">
+                <span>A:</span>
+                <span id="arith_row_a">0 1 0 0 1 0 1 1  (+75)</span>
+              </div>
+              <div class="calc-row">
+                <span>B/C2:</span>
+                <span id="arith_row_b">1 0 0 1 1 0 0 1  (-103)</span>
+              </div>
+              <div class="calc-row divider-row result-row">
+                <span>Hasil:</span>
+                <span id="arith_row_sum">1 1 1 0 0 1 0 0  (= -28)</span>
+              </div>
+            </div>
+
+            <!-- Status Flags Row -->
+            <div class="status-flags-row">
+              <div class="flag-badge" id="flag_overflow">⚠️ Overflow: NO</div>
+              <div class="flag-badge" id="flag_sign">🏷️ Sign Bit (MSB): 1</div>
+              <div class="flag-badge" id="flag_zero">⭕ Zero Flag (Z): NO</div>
+            </div>
+
+            <!-- Mathematical Explanation of Overflow -->
+            <div id="arith_summary_text" style="background:var(--bg-elevated); padding:16px; border-radius:var(--radius-sm); margin-top:20px; font-size:0.88rem; line-height:1.6;">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.5 Latihan Modul Minggu 2 -->
+        <div class="subtopic-panel" id="sub_2_5">
+          <div class="card-glass">
+            <div class="card-header-row">
+              <div class="card-title-group">
+                <div class="card-icon-box">📝</div>
+                <div>
+                  <h2 class="card-title">Latihan Terstruktur Modul Minggu 2</h2>
+                  <span class="card-subtitle">Soal resmi dari Slide 23, 24, 25 & 26 ITERA</span>
+                </div>
+              </div>
+            </div>
+            <div id="quiz_container_w2"></div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ################################################################
+           WEEKS 3 - 14 PANELS (SILABUS & TEMPAT MATERI TERJADWAL)
+           ################################################################ -->
+      <section class="week-panel" id="week_panel_3" data-week="3">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 3 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Aljabar Boolean & Gerbang Logika Dasar</h1>
+          <p class="hero-subtitle">
+            Hukum-hukum Aljabar Boolean, tabel kebenaran, gerbang logika dasar (AND, OR, NOT), serta gerbang universal (NAND, NOR, XOR, XNOR).
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 3 Segera Hadir</h2>
+          <p style="color:var(--text-muted); max-width:600px; margin:0 auto 20px;">
+            Materi dan simulator interaktif untuk Minggu ke-3 akan diunggah sesuai jadwal perkuliahan semester ganjil.
+          </p>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_4" data-week="4">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 4 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Penyederhanaan Logika & Peta Karnaugh (K-Map)</h1>
+          <p class="hero-subtitle">
+            Penyederhanaan fungsi Boolean 2, 3, dan 4 variabel menggunakan K-Map, pengelompokan minterm (SOP) dan maxterm (POS), serta kondisi don't care.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 4 Segera Hadir</h2>
+          <p style="color:var(--text-muted); max-width:600px; margin:0 auto 20px;">
+            Simulator interaktif K-Map solver dan visual grouping akan tersedia pada sesi perkuliahan Minggu 4.
+          </p>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_5" data-week="5">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 5 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Rangkaian Logika Kombinasional</h1>
+          <p class="hero-subtitle">
+            Desain rangkaian kombinasional: Half Adder, Full Adder, Ripple Carry Adder, Subtractor, dan Magnitude Comparator.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 5 Segera Hadir</h2>
+          <p style="color:var(--text-muted); max-width:600px; margin:0 auto 20px;">Materi terjadwal pada kurikulum semester berjalan.</p>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_6" data-week="6">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 6 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Multiplexer, Demultiplexer, Decoder & Encoder</h1>
+          <p class="hero-subtitle">
+            Seleksi data dengan MUX (2:1, 4:1, 8:1), DEMUX, Decoder 3-to-8, BCD to 7-Segment Decoder, dan Priority Encoder.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 6 Segera Hadir</h2>
+          <p style="color:var(--text-muted); max-width:600px; margin:0 auto 20px;">Materi terjadwal pada kurikulum semester berjalan.</p>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_7" data-week="7">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 7 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Review Tengah Semester & Studi Kasus Rangkaian</h1>
+          <p class="hero-subtitle">
+            Integrasi konsep bilangan digital, aljabar Boolean, K-Map, dan rangkaian kombinasional dalam studi kasus industri.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 7 Segera Hadir</h2>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_8" data-week="8">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 8 • Evaluasi Akademik</span>
+          <h1 class="hero-title">Ujian Tengah Semester (UTS)</h1>
+          <p class="hero-subtitle">
+            Evaluasi capaian pembelajaran CPMK-1 dan CPMK-2 MK Sistem Digital.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">📋</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Sesi Ujian Tengah Semester</h2>
+          <p style="color:var(--text-muted); max-width:600px; margin:0 auto 20px;">Pelaksanaan ujian dijadwalkan oleh bagian akademik ITERA.</p>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_9" data-week="9">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 9 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Rangkaian Sekuensial: Latches & Flip-Flop</h1>
+          <p class="hero-subtitle">
+            Konsep memori 1-bit, clocking, SR Latch, D Flip-Flop, JK Flip-Flop, T Flip-Flop, dan timing diagram.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 9 Segera Hadir</h2>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_10" data-week="10">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 10 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Register & Shift Register</h1>
+          <p class="hero-subtitle">
+            Penyimpanan data paralel, SISO, SIPO, PISO, PIPO, Universal Shift Register, dan aplikasi buffer data.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 10 Segera Hadir</h2>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_11" data-week="11">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 11 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Pencacah (Counter) Asinkron & Sinkron</h1>
+          <p class="hero-subtitle">
+            Ripple Counter, Synchronous Up/Down Counter, Modulo-N Counter, Ring Counter, dan Johnson Counter.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 11 Segera Hadir</h2>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_12" data-week="12">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 12 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Finite State Machine (FSM): Desain Moore & Mealy</h1>
+          <p class="hero-subtitle">
+            Pemodelan sistem berurutan dengan State Diagram, State Table, State Assignment, dan implementasi sirkuit logika FSM.
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 12 Segera Hadir</h2>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_13" data-week="13">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 13 • Kurikulum Terjadwal</span>
+          <h1 class="hero-title">Memori Digital (RAM, ROM) & Programmable Logic</h1>
+          <p class="hero-subtitle">
+            Organisasi alamat memori, SRAM, DRAM, ROM/Flash, serta pengenalan Programmable Logic Devices (PLD, CPLD, FPGA).
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🔒</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Materi Minggu 13 Segera Hadir</h2>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+      <section class="week-panel" id="week_panel_14" data-week="14">
+        <div class="hero-banner">
+          <span class="hero-meta-badge">Pertemuan 14 • Evaluasi Akhir</span>
+          <h1 class="hero-title">Proyek Aplikasi Sistem Digital & Evaluasi Akhir</h1>
+          <p class="hero-subtitle">
+            Presentasi proyek terintegrasi, studi kasus perancangan sirkuit kontrol lift/lampu lalu lintas, dan Ujian Akhir Semester (UAS).
+          </p>
+        </div>
+        <div class="card-glass" style="text-align:center; padding:48px 24px;">
+          <div style="font-size:3rem; margin-bottom:12px;">🎓</div>
+          <h2 style="font-size:1.4rem; margin-bottom:8px;">Sesi Evaluasi Akhir Perkuliahan</h2>
+          <p style="color:var(--text-muted); max-width:600px; margin:0 auto 20px;">Pengumpulan proyek dan ujian akhir semester.</p>
+          <button class="quick-action-btn primary" onclick="switchWeek(1)">Kembali ke Materi Minggu 1</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</div>
+
+<!-- Application Scripts -->
+<script src="js/converter.js"></script>
+<script src="js/complement.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
